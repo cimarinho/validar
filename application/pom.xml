@@ -31,7 +31,7 @@
         </dependency>
         <dependency>
             <groupId>com.example</groupId>
-            <artifactId>gs-multi-module-library</artifactId>
+            <artifactId>validar-library</artifactId>
             <version>${project.version}</version>
         </dependency>
 
@@ -52,7 +52,11 @@
             <artifactId>dozer</artifactId>
             <version>5.5.1</version>
         </dependency>
-
+        <dependency>
+            <groupId>io.craftsman</groupId>
+            <artifactId>dozer-jdk8-support</artifactId>
+            <version>1.0.6</version>
+        </dependency>
         <dependency>
             <groupId>commons-beanutils</groupId>
             <artifactId>commons-beanutils</artifactId>

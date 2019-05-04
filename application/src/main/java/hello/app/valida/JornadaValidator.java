@@ -12,7 +12,7 @@ public class JornadaValidator implements ValidatorCommon<JornadaEntity> {
     @Autowired
     private DozerBeanMapper mapper;
 
-    public JornadaEntity validate(Jornada target){
+    public JornadaEntity validate(Jornada target) {
         JornadaEntity jornadaEntity = new JornadaEntity();
         this.mapper.map(target, jornadaEntity);
         this.validar(jornadaEntity);

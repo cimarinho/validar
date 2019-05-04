@@ -5,6 +5,7 @@ import lombok.ToString;
 
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
+import java.time.LocalDateTime;
 
 @Data
 @ToString
@@ -17,6 +18,9 @@ public class JornadaEntity {
     private String nomeCliente;
 
     @NotNull
-    private String sobreNome;
+    private String sobreNomeCliente;
+
+    @NotNull
+    private LocalDateTime dataJornada;
 
 }
