@@ -18,10 +18,8 @@ public class CustomErrorAttributes extends DefaultErrorAttributes {
     @Override
     public Map<String, Object> getErrorAttributes(WebRequest webRequest, boolean includeStackTrace) {
 
-        // Let Spring handle the error first, we will modify later :)
         Map<String, Object> errorAttributes = super.getErrorAttributes(webRequest, includeStackTrace);
 
-        // format & update timestamp
         Object timestamp = errorAttributes.get("timestamp");
         if (timestamp == null) {
             errorAttributes.put("timestamp", dateFormat.format(new Date()));
@@ -29,7 +27,6 @@ public class CustomErrorAttributes extends DefaultErrorAttributes {
             errorAttributes.put("timestamp", dateFormat.format((Date) timestamp));
         }
 
-        // insert a new key
         errorAttributes.put("version", "1.2");
 
         return errorAttributes;
